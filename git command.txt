@@ -1,0 +1,143 @@
+
+Basic Commands:
+
+git status                                                                                        to see what's going on
+
+git init                                                                                          to make a git repository
+
+rm -rf .git                                                                                       to delete a git repository
+
+git add .                                                                                         to add all files in staging area
+
+git add --a                                                                                       to add all files in staging area
+
+git commit -m "Something"                                                                         to do a commit
+
+git commit -a -m "Something"                                                                      to do a direct commit without staging
+
+
+Modifying With Previous Commit Message:
+
+git commit ammend                                                                                 to modify previos commit message
+
+
+
+
+Removing File Commands:
+
+git rm -rf <filename>                                                                             to remove a specific file
+
+git rm -rf .                                                                                      to remove all files
+
+
+
+
+git ignore basics:
+
+for example we're ignoring .log file
+
+error.log                                                                                         to ignore a specific file
+
+*.log                                                                                             to ignore all .log file
+
+dir/                                                                                              to ignore a directory
+
+/dir/                                                                                             to ignore a directory only in the parent folder
+
+if a file isn't ignoring by git ignore run this command
+
+git rm -cached <filename>
+
+
+
+Difference Checking Commands:
+
+git diff <filename>                                                                               to check before and after difference in a specific file
+
+git diff .                                                                                        to check before and after difference in all files
+
+git diff --staged                                                                                 to check before and after difference in staged files
+
+
+
+Name Changing Commands:
+
+git mv <beforefilename> <afterfilename>                                                           to rename a file
+
+
+
+History Commands:
+
+git log                                                                                           to see a log in basic way
+
+git log -p                                                                                        to see a log in detail with before and after difference
+
+git log --pretty=short                                                                            
+
+git log --pretty=full                                                                             to see log in more detail with author name and commiter name
+
+git log --pretty=format                                                                           to find formats go on this website "https://git-scm.com/docs/git-log"
+
+
+
+
+Rolling Back Commands:
+
+git checkout -- <filename>                                                                        to replace a specific file with last commit
+
+git check -f                                                                                      to replace whole folder with last commit
+
+
+
+
+Remote Commands:
+
+git remote add origin "url"                                                                       to add your github repository
+
+git remote -v                                                                                     to see push and fetch link of your repository
+
+
+
+
+SSH Key Generating:
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com" or "your pc name"
+
+eval "$(ssh-agent -s)"                                                                            Run This Command To Start SSH Agent
+
+ssh-add ~/.ssh/id_rsa
+
+tail ~/.ssh/id_rsa.pub
+
+
+
+Push Commands"
+
+git push -u origin master                                                                         to push a your repository on github
+
+
+
+
+Alias Commands:
+
+git config --global alias.(Your Command) (Original Command)                                       to make your custom commands
+
+git config --global alias.st status                                                               example:
+
+
+
+Discard Changes or Roll Back To Last Commit Commands:
+
+git restore <filename>                                                                            to discard all changes in a specific file
+
+git restore .                                                                                     to discard all changes in the whole folder
+
+
+
+Branching Commands:
+
+git checkout -b (your branch name)                                                                to make a new branch
+
+git checkout (your branch name)                                                                   to switch your branches
+
+git branch                                                                                        to show all branches in the repository
